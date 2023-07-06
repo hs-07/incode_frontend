@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'map': "url('/assets/images/background-2.jpg')",
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
@@ -18,6 +19,9 @@ module.exports = {
       md: "768px",
       lg: "1024px",
     },
+    boxShadow:  {
+      'hs' :  '0 25px 37px 20px rgba(0 0 0 / 0.25)',
+    }
   },
   plugins: [],
 }

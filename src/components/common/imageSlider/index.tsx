@@ -1,4 +1,6 @@
-import React from "react";
+
+import React, { useState } from "react";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Card } from "@/components/helpers";
@@ -22,13 +24,42 @@ const responsive = {
 };
 
 const imageCards = [
-{id: '1', url: "/assets/icons/car.png", label: "Ride", className: ""},
-{id: '2', url: "/assets/icons/car.png", label: "Pink Ride", className: ""},
-{id: '3', url: "/assets/icons/car.png", label: "Ride AC", className: ""},
-{id: '4', url: "/assets/icons/car.png", label: "Auto", className: ""},
-]
+  {
+    id: "1",
+    url: "/assets/icons/car.png",
+    label: "Ride",
+    className: "bg-[#E2F4FF]",
+    cardName: "car",
+  },
+  {
+    id: "2",
+    url: "/assets/icons/car.png",
+    label: "Pink Ride",
+    className: "bg-[#FFE2F5]",
+    cardName: "pinkCar",
+  },
+  {
+    id: "3",
+    url: "/assets/icons/car.png",
+    label: "Ride AC",
+    className: "bg-[#E2F4FF]",
+    cardName: "acCar",
+  },
+  {
+    id: "4",
+    url: "/assets/icons/car.png",
+    label: "Auto",
+    className: "bg-[#E2F4FF]",
+    cardName: "auto",
+  },
+];
 
 const Index: React.FC = () => {
+  const [activeCard, setActiveCard] = useState("");
+
+  const handleTabClick = (cardName: string) => {
+    setActiveCard(cardName);
+  };
   return (
     <Carousel
       swipeable={false}
@@ -48,7 +79,19 @@ const Index: React.FC = () => {
       itemClass="carousel-item-padding-10-px"
     >
       {imageCards.map((card) => (
-        <Card id={card.id} className={card.className} label={card.label} url={card.url}/>
+        <button onClick={() => handleTabClick(card.cardName)}  className="w-full">
+        <Card
+          id={card.id}
+          className={
+            activeCard === card.cardName
+              ? `${card.className} active`
+              : ""
+          }
+          label={card.label}
+          url={card.url}
+        />
+        </button>
+
       ))}
     </Carousel>
   );

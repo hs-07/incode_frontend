@@ -28,7 +28,8 @@ const index: React.FC = () => {
             </a>
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-3xl shadow-xl opacity-100 p-2.5 text-gray-700"
+              className="inline-flex items-center bg-white justify-center rounded-3xl shadow-xl opacity-100 p-2.5 text-gray-700"
+
               onClick={() => setMobileMenuOpen(true)}
             >
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
