@@ -53,7 +53,7 @@ const imageCards = [
 ];
 
 const Index: React.FC = () => {
-  const [activeCard, setActiveCard] = useState("car");
+  const [activeCard, setActiveCard] = useState("");
 
   const handleTabClick = (cardName: string) => {
     setActiveCard(cardName);
