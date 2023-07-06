@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Card } from "@/components/helpers";
@@ -58,7 +60,6 @@ const Index: React.FC = () => {
   const handleTabClick = (cardName: string) => {
     setActiveCard(cardName);
   };
-
   return (
     <Carousel
       swipeable={false}
@@ -90,6 +91,7 @@ const Index: React.FC = () => {
           url={card.url}
         />
         </button>
+
       ))}
     </Carousel>
   );
