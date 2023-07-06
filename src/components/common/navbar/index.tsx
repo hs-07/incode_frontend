@@ -84,7 +84,7 @@ const index: React.FC = () => {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="text-base py-2 px-6 rounded-md text-white font-semibold leading-6 font-barlow bg-[#A7E92F]"
+                    className="text-lg py-3 px-8 rounded-md text-white font-semibold leading-6 font-barlow bg-[#A7E92F]"
                   >
                     Driver Mode
                   </a>

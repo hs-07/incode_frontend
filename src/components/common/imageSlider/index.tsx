@@ -24,28 +24,28 @@ const responsive = {
 const imageCards = [
   {
     id: "1",
-    url: "/assets/icons/car.png",
+    url: "/assets/icons/car-2.svg",
     label: "Ride",
     className: "bg-[#E2F4FF]",
     cardName: "car",
   },
   {
     id: "2",
-    url: "/assets/icons/car.png",
+    url: "/assets/icons/car-2.svg",
     label: "Pink Ride",
     className: "bg-[#FFE2F5]",
     cardName: "pinkCar",
   },
   {
     id: "3",
-    url: "/assets/icons/car.png",
+    url: "/assets/icons/ac-car.svg",
     label: "Ride AC",
     className: "bg-[#E2F4FF]",
     cardName: "acCar",
   },
   {
     id: "4",
-    url: "/assets/icons/car.png",
+    url: "/assets/icons/auto.svg",
     label: "Auto",
     className: "bg-[#E2F4FF]",
     cardName: "auto",
