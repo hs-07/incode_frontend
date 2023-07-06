@@ -12,7 +12,7 @@ const inputs = [
 const index: React.FC = () => {
   return (
     <div className="flex w-screen justify-end">
-      <div className="sm:w-full md:w-1/2 lg:w-1/3 h-screen bg-white">
+      <div className="sm:w-full md:w-1/2 lg:w-1/3 sm:h-screen bg-white">
         <div className="lg:h-2/5 sm:h-1/2 bg-map bg-contain -mb-2">
           <Navbar />
         </div>
