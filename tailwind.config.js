@@ -20,8 +20,11 @@ module.exports = {
       lg: "1024px",
     },
     boxShadow:  {
-      'hs' :  '0 25px 37px 20px rgba(0 0 0 / 0.25)',
-    }
+      hs :  '0 25px 37px 20px rgba(0 0 0 / 0.25)',
+    },
+    fontFamily: {
+      lucide: "'Trebuchet MS' 'Lucida Sans Unicode' 'Lucida Grande' 'Lucida Sans', sans-serif",
+    },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar"),],
 }
