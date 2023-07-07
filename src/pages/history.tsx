@@ -20,9 +20,9 @@ const labels =[
 
 const history: React.FC = () => {
   return (
-    <div className="flex w-screen justify-end ">
-      <div className="sm:w-full md:w-1/2 lg:w-1/3 sm:h-screen bg-white overflow-y-scroll scroll-smooth scrollbar-thin  scrollbar-track-rounded-full  scrollbar-thumb-rounded-full scrollbar-thumb-gray-300">
-        <div className="">
+    <div className="flex justify-end w-screen h-screen">
+      <div className="flex sm:w-full md:w-1/2 lg:w-1/3 h-screen bg-white overflow-y-scroll scroll-smooth scrollbar-thin  scrollbar-track-rounded-full  scrollbar-thumb-rounded-full scrollbar-thumb-gray-300">
+        <div className="flex w-full flex-col justify-between">
           <Navbar className="bg-white" />
           <div className="flex flex-col px-5 pb-2 ">
             <h1 className="text-xl font-semibold">{historyConst.Request}</h1>
