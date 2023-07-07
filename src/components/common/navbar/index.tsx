@@ -3,21 +3,21 @@ import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const items =[
-  {id: '1', label: "City", url: '', src:'/assets/icons/car.svg'},
-  {id: '2', label: "Request History", url: '', src:'/assets/icons/Clock.svg'},
+  {id: '1', label: "City", url: '/', src:'/assets/icons/car.svg'},
+  {id: '2', label: "Request History", url: '/history', src:'/assets/icons/Clock.svg'},
   {id: '3', label: "Rentals", url: '', src:'/assets/icons/Globe.svg'},
   {id: '4', label: "Freight", url: '', src:'/assets/icons/container.svg'},
   {id: '5', label: "Safety", url: '', src:'/assets/icons/Shield_Check.svg'},
   {id: '6', label: "Settings", url: '', src:'/assets/icons/Settings.svg'},
-  {id: '7', label: "FAQ", url: '', src:'/assets/icons/Info.svg'},
-  {id: '8', label: "Support", url: '', src:'/assets/icons/Chat.svg'},
 ]
+interface NavbarProps {
+  className ?: string,
+}
 
-
-const index: React.FC = () => {
+const index: React.FC<NavbarProps> = ({className}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <nav className="px-4 py-3">
+    <nav className={`px-4 py-3 ${className}`}>
     <div className="flex z-99 justify-between items-center">
             <a href="/" className="p-1">
               <img
@@ -28,7 +28,7 @@ const index: React.FC = () => {
             </a>
             <button
               type="button"
-              className="inline-flex items-center bg-white justify-center rounded-3xl shadow-xl opacity-100 p-2.5 text-gray-700"
+              className="inline-flex items-center bg-white justify-center rounded-3xl shadow-lg p-2.5 "
 
               onClick={() => setMobileMenuOpen(true)}
             >
@@ -66,8 +66,8 @@ const index: React.FC = () => {
                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 flex flex-col justify-between divide-y divide-gray-500/10">
+            <div className="mt-6 flow-root h-full">
+              <div className="-my-6 flex flex-col justify-around divide-y divide-gray-500/10">
 
                 {/* mobile navbar links */}
                 <div className="space-y-2 py-6">
@@ -85,7 +85,7 @@ const index: React.FC = () => {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="text-lg py-3 px-8 rounded-md text-white font-semibold leading-6 font-barlow bg-[#A7E92F]"
+                    className="text-lg py-3 px-8 rounded-md text-black font-semibold leading-6 font-barlow bg-[#A7E92F]"
                   >
                     Driver Mode
                   </a>
