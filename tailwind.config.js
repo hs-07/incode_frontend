@@ -21,6 +21,7 @@ module.exports = {
     },
     boxShadow:  {
       hs :  '0 25px 37px 20px rgba(0 0 0 / 0.25)',
+      lg :  '0px 4px 19px rgb(0 0 0 / 19%)',
     },
     fontFamily: {
       lucide: "'Trebuchet MS' 'Lucida Sans Unicode' 'Lucida Grande' 'Lucida Sans', sans-serif",
