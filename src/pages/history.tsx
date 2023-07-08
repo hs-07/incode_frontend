@@ -14,8 +14,8 @@ const requests = [
 {name:'JSSATE, Noida', date: '1 July', price:'₹300.00', link:'/details'},
 ]
 const labels =[
-{src:'/assets/icons/Clock.svg', name: 'View older requests'},
-{src:'/assets/icons/heart.svg', name: 'View saved drivers'}
+{src:'/assets/icons/Clock.svg', name: 'View older requests', url: ''},
+{src:'/assets/icons/heart.svg', name: 'View saved drivers', url: '/savedDrivers'}
 ]
 
 const history: React.FC = () => {
@@ -43,7 +43,7 @@ const history: React.FC = () => {
           {/* Requests ends */}
           <div className="flex flex-col lg:py-4 sm:py-5 px-5 gap-2">
             {labels.map((label) => (
-                <Labels name={label.name} url={''} className=" w-10 " src={label.src}/>
+                <Labels name={label.name} url={label.url} className=" w-10 " src={label.src}/>
             ))}
           </div>
         </div>
