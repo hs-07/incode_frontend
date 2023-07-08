@@ -35,7 +35,7 @@ const SavedDrivers: React.FC<SavedDriversProps> = ({
         <div className="flex w-full flex-col">
           <Navbar className="bg-white" />
           <div className="flex px-5 items-center pb-3">
-            <a href="/details">
+            <a href="/history">
               <img src="/assets/icons/left.svg" alt="" />
             </a>
             <h1 className="text-2xl px-4">Saved drivers</h1>

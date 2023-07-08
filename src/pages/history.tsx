@@ -7,6 +7,7 @@ interface RequestProps {
   destinationAddress: string;
   startTime: string;
   price: string;
+  _id: string;
 }
 
 const API = "https://incode-backend.onrender.com/api/trips";
@@ -18,12 +19,16 @@ const historyConst = {
 };
 
 const labels = [
-  { src: '/assets/icons/Clock.svg', name: 'View older requests', url: '' },
-  { src: '/assets/icons/heart.svg', name: 'View saved drivers', url: '/savedDrivers' }
+  { src: "/assets/icons/Clock.svg", name: "View older requests", url: "" },
+  {
+    src: "/assets/icons/heart.svg",
+    name: "View saved drivers",
+    url: "/savedDrivers",
+  },
 ];
 
-const History: React.FC<RequestProps> = ({ destinationAddress, startTime, price }) => {
-  const [trips, setTrips] = useState<RequestProps[]>([ ]);
+const History: React.FC<RequestProps> = () => {
+  const [trips, setTrips] = useState<RequestProps[]>([]);
 
   const getTrips = async (url: string) => {
     try {
@@ -54,16 +59,15 @@ const History: React.FC<RequestProps> = ({ destinationAddress, startTime, price 
           {/* Requests starts */}
           <div className="flex flex-col px-5 overflow-y-scroll scroll-smooth scrollbar-thin  scrollbar-track-rounded-full  scrollbar-thumb-rounded-full scrollbar-thumb-gray-300">
             <h1 className="">{historyConst.Past}</h1>
-            {
-              trips.map((trip, index) => (
-                <a href="/details" key={index}>
-                  <Requests
-                    name={trip.destinationAddress}
-                    date={trip.startTime}
-                    price={trip.price}
-                  />
-                </a>
-              ))}
+            {trips.map((trip) => (
+              <a href="/details" key={trip._id}>
+                <Requests
+                  name={trip.destinationAddress}
+                  date={trip.startTime}
+                  price={trip.price}
+                />
+              </a>
+            ))}
           </div>
           {/* Requests ends */}
           <div className="flex flex-col lg:py-4 sm:py-5 px-5 gap-2">
