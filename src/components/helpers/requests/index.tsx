@@ -7,9 +7,9 @@ interface RequestsProps {
 
 const index: React.FC<RequestsProps> = ({ date, price, name }) => {
   return (
-    <div className="flex w-full justify-between items-center py-2 border-b border-gray-200 cursor-pointer">
+    <div className="flex w-full justify-between items-center py-4 border-b border-gray-200 cursor-pointer">
         <div className="flex">
-      <img src="/assets/images/background-2.jpg " alt="" className="lg:w-20 lg:h-20 sm:w-16 sm:h-16 rounded-md"/>
+      <img src="/assets/images/background-2.jpg " alt="" className="w-20 h-20 rounded-md"/>
       <div className="flex flex-col sm:px-2 lg:px-4">
         <h2 className="">{name}</h2>
         <p>{date}</p>
