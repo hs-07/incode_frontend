@@ -72,7 +72,7 @@ const index: React.FC = () => {
         
         </div>
         <div className="lg:px-8 sm:px-3 mt-2 bg-white">
-            <Button name="Find a driver" />
+            <Button name="Find a driver" className="bg-[#A7E92F]"/>
           </div>
       </div>
             

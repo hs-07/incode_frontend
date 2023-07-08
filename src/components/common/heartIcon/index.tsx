@@ -8,10 +8,10 @@ import Typography from "@mui/material/Typography";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
-    color: "#ff6d75",
+    color: "#A7E92F",
   },
   "& .MuiRating-iconHover": {
-    color: "#ff3d47",
+    color: "#A7E92F",
   },
 });
 
