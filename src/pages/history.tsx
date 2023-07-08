@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar } from "@/components/common";
+import { Navbar } from "@/components/common"; 
 import { Tab, Requests,Labels } from "@/components/helpers";
 
 const historyConst = {
@@ -9,9 +9,9 @@ const historyConst = {
 };
 
 const requests = [
-{name:'JSSATE, Noida', date: '1 July', price:'₹300.00'},
-{name:'JSSATE, Noida', date: '1 July', price:'₹320.00'},
-{name:'JSSATE, Noida', date: '1 July', price:'₹300.00'},
+{name:'JSSATE, Noida', date: '1 July', price:'₹300.00', link:'/details'},
+{name:'JSSATE, Noida', date: '1 July', price:'₹320.00', link:'/details'},
+{name:'JSSATE, Noida', date: '1 July', price:'₹300.00', link:'/details'},
 ]
 const labels =[
 {url:'/assets/icons/Clock.svg', name: 'View older requests'},
@@ -31,15 +31,19 @@ const history: React.FC = () => {
           <div className="sm:py-2 sm:px-5">
             <Tab />
           </div>
+          {/* Requests starts */}
           <div className="flex flex-col px-5">
             <h1 className="">{historyConst.Past}</h1>
             {requests.map((request) => (
+              <a href={request.link}>
                 <Requests name={request.name} date={request.date} price={request.price}/>
+                </a>
             ))}
           </div>
-          <div className="flex flex-col lg:py-5 sm:py-2 sm:px-5 gap-2">
+          {/* Requests ends */}
+          <div className="flex flex-col py-5 px-5 gap-2">
             {labels.map((label) => (
-                <Labels name={label.name} url={label.url} />
+                <Labels name={label.name} url={label.url} className=" w-10 "/>
             ))}
           </div>
         </div>
