@@ -13,7 +13,7 @@ const index: React.FC<RequestsProps> = ({ date, price, name }) => {
       <div className="flex flex-col sm:px-2 lg:px-4">
         <h2 className="lg:text-sm">{name}</h2>
         <p className="lg:text-sm">{date}</p>
-        <p className="lg:text-sm">{price}</p>
+        <p className="lg:text-sm">₹ {price}</p>
       </div>
       </div>
       <img src="/assets/icons/right-light.svg" alt="" />
