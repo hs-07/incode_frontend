@@ -50,7 +50,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .react-multi-carousel-track {
-    padding: 0px 8px !important;
+    padding: 8px 8px !important;
   }
   .react-multi-carousel-item {
     padding: 0px !important;
