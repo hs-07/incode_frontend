@@ -6,3 +6,4 @@ export { default as Requests } from './requests';
 export { default as Labels } from './labels';
 export { default as DetailBlock } from './detailBlock';
 export { default as Favourite } from './fav';
+export { default as ReceiptBlock } from './receiptBlock';

@@ -9,9 +9,9 @@ const detailsBlock = {
   price: "300.00, Cash",
 };
 const labels =[
-  {url:'/assets/icons/ruppee.svg', name: 'Reciept'},
-  {url:'/assets/icons/Shield_Check.svg', name: 'Report a safety issue'},
-  {url:'/assets/icons/Chat.svg', name: 'Support'},
+  {src:'/assets/icons/ruppee.svg', name: 'Receipt', url:'/receipt'},
+  {src:'/assets/icons/Shield_Check.svg', name: 'Report a safety issue', url:''},
+  {src:'/assets/icons/Chat.svg', name: 'Support', url:''},
   ]
   
 
@@ -43,7 +43,7 @@ const details: React.FC = () => {
           <Favourite />
           <div className="flex flex-col py-5 px-5 gap-2">
             {labels.map((label) => (
-                <Labels name={label.name} url={label.url} className=''/>
+                <Labels name={label.name} url={label.url} className='' src={label.src}/>
             ))}
           </div>
         </div>
