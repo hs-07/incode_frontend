@@ -8,7 +8,8 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-      </body>      
+      </body>  
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>    
     </Html>
   );
 }
